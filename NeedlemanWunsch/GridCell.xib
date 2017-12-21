@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNextCondensed.ttc">
+            <string>AvenirNextCondensed-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GridCell" customModule="NeedlemanWunsch" customModuleProvider="target">
+            <connections>
+                <outlet property="diagonalView" destination="r3h-Ia-fUz" id="2lN-CH-LH5"/>
+                <outlet property="leftView" destination="17G-al-BFx" id="7T6-oj-yfk"/>
+                <outlet property="mainLabel" destination="QV3-7q-eet" id="aCt-OI-n1v"/>
+                <outlet property="topView" destination="CGC-fu-OYv" id="lJF-vz-UjP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="282" height="196"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="QV3-7q-eet" userLabel="MainLabel">
+                    <rect key="frame" x="5" y="6" width="273" height="186"/>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGC-fu-OYv" userLabel="TopView">
+                    <rect key="frame" x="140.5" y="-4" width="1" height="8"/>
+                    <color key="backgroundColor" red="0.92753906249999996" green="0.17254901959999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="6jQ-my-Qp0"/>
+                        <constraint firstAttribute="height" constant="8" id="s9L-Tl-ewR"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17G-al-BFx" userLabel="LeftView">
+                    <rect key="frame" x="-5" y="98" width="8" height="1"/>
+                    <color key="backgroundColor" red="0.92753906249999996" green="0.17254901959999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="8" id="mzk-Fa-6XA"/>
+                        <constraint firstAttribute="height" constant="1" id="uoH-aZ-eRI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3h-Ia-fUz" userLabel="DiagonalView">
+                    <rect key="frame" x="-1" y="-5" width="1" height="9"/>
+                    <color key="backgroundColor" red="0.92753906249999996" green="0.17254901959999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="r7b-NG-9ga"/>
+                        <constraint firstAttribute="height" constant="9" id="xkx-sn-3ga"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="QV3-7q-eet" firstAttribute="leading" secondItem="17G-al-BFx" secondAttribute="trailing" constant="2" id="3J8-6i-cvn"/>
+                <constraint firstItem="17G-al-BFx" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="7BF-19-6Iu"/>
+                <constraint firstItem="CGC-fu-OYv" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="A1B-lG-drO"/>
+                <constraint firstItem="r3h-Ia-fUz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="-1" id="FDN-Qf-yT5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QV3-7q-eet" secondAttribute="bottom" constant="4" id="GBA-wD-Zhu"/>
+                <constraint firstItem="r3h-Ia-fUz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-5" id="Hhe-oL-asS"/>
+                <constraint firstItem="17G-al-BFx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="-5" id="QM6-ub-S7w"/>
+                <constraint firstItem="CGC-fu-OYv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-4" id="ada-iq-W8O"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QV3-7q-eet" secondAttribute="trailing" constant="4" id="vl7-NR-I6O"/>
+                <constraint firstItem="QV3-7q-eet" firstAttribute="top" secondItem="CGC-fu-OYv" secondAttribute="bottom" constant="2" id="voa-t0-F8t"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-26" y="-367"/>
+        </view>
+    </objects>
+</document>

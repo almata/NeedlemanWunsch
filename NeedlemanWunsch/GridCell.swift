@@ -9,35 +9,20 @@
 import UIKit
 
 class GridCell: XibLoadingView {
-
-    enum Origin { case none, top, left, diagonal }
     
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var leftView: UIView!
     @IBOutlet weak var diagonalView: UIView!
     @IBOutlet weak var mainLabel: UILabel!
     
-    // AQUESTA PART CAL REFER-LA UNA MICA PERQUÈ, DE FET, EL CONTROL NO TÉ UN Origin SINÓ UN ARRAY.
-    
-    var origin: Origin = .top {
+    var origin: [Origin] = [] {
         didSet {
-            switch origin {
-            case .none:
-                topView.isHidden = true
-                leftView.isHidden = true
-                diagonalView.isHidden = true
-            case .top:
-                topView.isHidden = false
-                leftView.isHidden = true
-                diagonalView.isHidden = true
-            case .left:
-                topView.isHidden = true
-                leftView.isHidden = false
-                diagonalView.isHidden = true
-            case .diagonal:
-                topView.isHidden = true
-                leftView.isHidden = true
-                diagonalView.isHidden = false
+            for o in origin {
+                switch o {
+                case .top: topView.isHidden = false
+                case .left: leftView.isHidden = false
+                case .diagonal: diagonalView.isHidden = false
+                }
             }
         }
     }

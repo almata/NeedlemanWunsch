@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400976E91FED66560031E28F /* NeedlemanWunsch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400976E81FED66560031E28F /* NeedlemanWunsch.swift */; };
 		406FA82F1FEAA4B5001D572A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406FA82E1FEAA4B5001D572A /* AppDelegate.swift */; };
 		406FA8311FEAA4B5001D572A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406FA8301FEAA4B5001D572A /* ViewController.swift */; };
 		406FA8341FEAA4B5001D572A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406FA8321FEAA4B5001D572A /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		400976E81FED66560031E28F /* NeedlemanWunsch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedlemanWunsch.swift; sourceTree = "<group>"; };
 		406FA82B1FEAA4B5001D572A /* NeedlemanWunsch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeedlemanWunsch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406FA82E1FEAA4B5001D572A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		406FA8301FEAA4B5001D572A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				406FA84E1FEAB9DE001D572A /* XibLoadingView.swift */,
 				406FA8501FEABA73001D572A /* GridCell.swift */,
 				406FA8521FEABADC001D572A /* GridCell.xib */,
+				400976E81FED66560031E28F /* NeedlemanWunsch.swift */,
 			);
 			path = NeedlemanWunsch;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				406FA8311FEAA4B5001D572A /* ViewController.swift in Sources */,
 				406FA82F1FEAA4B5001D572A /* AppDelegate.swift in Sources */,
 				406FA8511FEABA73001D572A /* GridCell.swift in Sources */,
+				400976E91FED66560031E28F /* NeedlemanWunsch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

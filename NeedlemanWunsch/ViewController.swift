@@ -27,6 +27,8 @@ class ViewController: UIViewController {
     }
 
     private func createGrid() {
+        let alignment = needlemanWunsch(input1: input1, input2: input2)
+        
         let seq1 = Array(input1) // Horizontal, so its length sets number of columns (j)
         let seq2 = Array(input2) // Vertical, so its length sets number of rows (i)
 
@@ -55,7 +57,8 @@ class ViewController: UIViewController {
                     cell.text = String(seq2[i - 2])
                     customize(cell, isHeader: true)
                 default: // Main part of the grid, where we place all numbers
-                    cell.text = "8"
+                    cell.text = String(alignment.scores[i - 1][j - 1])
+                    cell.origin = alignment.paths[i - 1][j - 1]
                     customize(cell, isHeader: false)
                     allLabels[i][j] = cell
                 }
@@ -66,8 +69,7 @@ class ViewController: UIViewController {
     
     private func customize(_ cell: GridCell, isHeader: Bool) {
         if isHeader {
-            cell.origin = .none
-            cell.mainLabel.font = UIFont(name:"AvenirNextCondensed-Medium", size: 30)
+            cell.mainLabel.font = UIFont(name:"Avenir-Medium", size: 30)
             cell.view.backgroundColor = .white
         } else {
             cell.color = .darkGray

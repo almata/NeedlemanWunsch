@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     var input1 = "MARTINIS"
     var input2 = "CACAOXX"
     
+    @IBOutlet weak var firstText: UITextField!
+    @IBOutlet weak var secondText: UITextField!
+    @IBOutlet weak var matchText: UITextField!
+    @IBOutlet weak var substitutionText: UITextField!
+    @IBOutlet weak var gapText: UITextField!
     @IBOutlet weak var mainStackView: UIStackView!
 
     var allLabels: [[GridCell]] = []
@@ -26,6 +31,14 @@ class ViewController: UIViewController {
         createGrid()
     }
 
+    @IBAction func run() {
+        
+    }
+    
+    @IBAction func demonstrate() {
+        
+    }
+    
     private func createGrid() {
         let alignment = needlemanWunsch(input1: input1, input2: input2)
         

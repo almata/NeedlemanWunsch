@@ -13,8 +13,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //var input1 = "TGCTCGTA"
-    //var input2 = "TTCATA"
     var alignment = needlemanWunsch(input1: "TGCTCGTA", input2: "TTCATA")
     
     @IBOutlet weak var firstText: UITextField!
@@ -26,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultStackView: UIStackView!
     
     var allLabels: [[GridCell]] = []
+    var resultCells: [[GridCell]] = []
     //var scoreLabels: [[UILabel]] = [] segurament quedarà com variable interna d'on sigui, sent subconjunt d'allLabels
     
     
@@ -82,11 +81,26 @@ class ViewController: UIViewController {
     }
     
     private func createResultGrid() {
-        addResultRowFor(alignment.output1)
-        addResultRowFor(alignment.output2)
+        let num = Array(alignment.output1).count
+        
+        for _ in 0...2 { resultCells.append(Array(repeatElement(GridCell(), count: num))) }
+        
+        addOutput(alignment.output1, atRow: 0)
+        addOutput(alignment.output2, atRow: 1)
+        addOutput(String(repeating: Character(" "), count: num), atRow: 2)
+        
+        for k in 0..<num {
+            if resultCells[0][k].text == resultCells[1][k].text {
+                resultCells[2][k].text = String(5)
+            } else if resultCells[0][k].text == "-" || resultCells[1][k].text == "-" {
+                resultCells[2][k].text = String(-6)
+            } else {
+                resultCells[2][k].text = String(-2)
+            }
+        }
     }
     
-    private func addResultRowFor(_ output: String) {
+    private func addOutput(_ output: String, atRow row: Int) {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.distribution = .fillEqually
@@ -98,6 +112,7 @@ class ViewController: UIViewController {
             let cell = GridCell()
             cell.text = String(seq[k])
             customize(cell, isHeader: true)
+            resultCells[row][k] = cell
             stack.addArrangedSubview(cell)
         }
     }

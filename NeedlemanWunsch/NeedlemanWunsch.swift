@@ -11,7 +11,7 @@ import Foundation
 enum Origin { case top, left, diagonal }
 
 func needlemanWunsch(input1: String, input2: String, match: Int = 5, substitution: Int = -2, gap: Int = -6)
-    -> (output1: String, output2: String, score: Int, scores: [[Int]], paths: [[[Origin]]]) {
+    -> (input1: String, input2: String, output1: String, output2: String, score: Int, scores: [[Int]], paths: [[[Origin]]]) {
         
         let seq1 = Array(input1) // Horizontal, so its length sets number of columns (j)
         let seq2 = Array(input2) // Vertical, so its length sets number of rows (i)
@@ -76,7 +76,7 @@ func needlemanWunsch(input1: String, input2: String, match: Int = 5, substitutio
             }
         }
         
-        return (output1, output2, scores[seq2.count][seq1.count], scores, paths)
+        return (input1, input2, output1, output2, scores[seq2.count][seq1.count], scores, paths)
 }
 
 // Test with sequences from Module 2 Figure 25.

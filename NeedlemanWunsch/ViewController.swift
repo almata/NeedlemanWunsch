@@ -13,8 +13,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var input1 = "MARTINIS"
-    var input2 = "CACAOXX"
+    //var input1 = "TGCTCGTA"
+    //var input2 = "TTCATA"
+    var alignment = needlemanWunsch(input1: "TGCTCGTA", input2: "TTCATA")
     
     @IBOutlet weak var firstText: UITextField!
     @IBOutlet weak var secondText: UITextField!
@@ -22,13 +23,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var substitutionText: UITextField!
     @IBOutlet weak var gapText: UITextField!
     @IBOutlet weak var mainStackView: UIStackView!
-
+    @IBOutlet weak var resultStackView: UIStackView!
+    
     var allLabels: [[GridCell]] = []
     //var scoreLabels: [[UILabel]] = [] segurament quedarà com variable interna d'on sigui, sent subconjunt d'allLabels
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        createGrid()
+        createMainGrid()
+        createResultGrid()
     }
 
     @IBAction func run() {
@@ -39,15 +43,12 @@ class ViewController: UIViewController {
         
     }
     
-    private func createGrid() {
-        let alignment = needlemanWunsch(input1: input1, input2: input2)
-        
-        let seq1 = Array(input1) // Horizontal, so its length sets number of columns (j)
-        let seq2 = Array(input2) // Vertical, so its length sets number of rows (i)
+    private func createMainGrid() {
+        let seq1 = Array(alignment.input1) // Horizontal, so its length sets number of columns (j)
+        let seq2 = Array(alignment.input2) // Vertical, so its length sets number of rows (i)
 
         for _ in 0...seq2.count + 1 {
-            let mockLabel = GridCell()
-            allLabels.append(Array(repeatElement(mockLabel, count: seq1.count + 2)))
+            allLabels.append(Array(repeatElement(GridCell(), count: seq1.count + 2)))
         }
         
         for i in 0...seq2.count + 1 {
@@ -77,6 +78,27 @@ class ViewController: UIViewController {
                 }
                 stack.addArrangedSubview(cell)
             }
+        }
+    }
+    
+    private func createResultGrid() {
+        addResultRowFor(alignment.output1)
+        addResultRowFor(alignment.output2)
+    }
+    
+    private func addResultRowFor(_ output: String) {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.distribution = .fillEqually
+        stack.spacing = 1
+        resultStackView.addArrangedSubview(stack)
+        
+        let seq = Array(output)
+        for k in 0..<seq.count {
+            let cell = GridCell()
+            cell.text = String(seq[k])
+            customize(cell, isHeader: true)
+            stack.addArrangedSubview(cell)
         }
     }
     

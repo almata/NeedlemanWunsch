@@ -17,6 +17,7 @@
 		406FA84F1FEAB9DE001D572A /* XibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406FA84E1FEAB9DE001D572A /* XibLoadingView.swift */; };
 		406FA8511FEABA73001D572A /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406FA8501FEABA73001D572A /* GridCell.swift */; };
 		406FA8531FEABADC001D572A /* GridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 406FA8521FEABADC001D572A /* GridCell.xib */; };
+		408490F11FEE42D90007CF62 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408490F01FEE42D90007CF62 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		406FA84E1FEAB9DE001D572A /* XibLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibLoadingView.swift; sourceTree = "<group>"; };
 		406FA8501FEABA73001D572A /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
 		406FA8521FEABADC001D572A /* GridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCell.xib; sourceTree = "<group>"; };
+		408490F01FEE42D90007CF62 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				406FA8501FEABA73001D572A /* GridCell.swift */,
 				406FA8521FEABADC001D572A /* GridCell.xib */,
 				400976E81FED66560031E28F /* NeedlemanWunsch.swift */,
+				408490F01FEE42D90007CF62 /* InfoViewController.swift */,
 			);
 			path = NeedlemanWunsch;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				406FA8311FEAA4B5001D572A /* ViewController.swift in Sources */,
 				406FA82F1FEAA4B5001D572A /* AppDelegate.swift in Sources */,
 				406FA8511FEABA73001D572A /* GridCell.swift in Sources */,
+				408490F11FEE42D90007CF62 /* InfoViewController.swift in Sources */,
 				400976E91FED66560031E28F /* NeedlemanWunsch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

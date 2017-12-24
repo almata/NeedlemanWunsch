@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var resultStackView: UIStackView!
     
-    var allLabels: [[GridCell]] = []
+    var allCells: [[GridCell]] = []
     var resultCells: [[GridCell]] = []
     //var scoreLabels: [[UILabel]] = [] segurament quedarà com variable interna d'on sigui, sent subconjunt d'allLabels
     
@@ -35,11 +35,35 @@ class ViewController: UIViewController {
     }
 
     @IBAction func run() {
+        endEditingAllTextFields()
+        allCells = []
+        resultCells = []
+        for view in mainStackView.arrangedSubviews { view.removeFromSuperview() }
+        for view in resultStackView.arrangedSubviews { view.removeFromSuperview() }
         
+        let match = Int(self.matchText.text!)!
+        let substitution = Int(self.substitutionText.text!)!
+        let gap = Int(self.gapText.text!)!
+        let input1 = self.firstText.text!
+        let input2 = self.secondText.text!
+        
+        alignment = needlemanWunsch(input1: input1, input2: input2, match: match, substitution: substitution, gap: gap)
+        
+        createMainGrid()
+        createResultGrid()
     }
     
     @IBAction func demonstrate() {
-        
+        endEditingAllTextFields()
+    }
+    
+    private func endEditingAllTextFields() {
+        textFieldDidEndEditing(matchText)
+        textFieldDidEndEditing(substitutionText)
+        textFieldDidEndEditing(gapText)
+        textFieldDidEndEditing(firstText)
+        textFieldDidEndEditing(secondText)
+        view.endEditing(true)
     }
     
     private func createMainGrid() {
@@ -47,7 +71,7 @@ class ViewController: UIViewController {
         let seq2 = Array(alignment.input2) // Vertical, so its length sets number of rows (i)
 
         for _ in 0...seq2.count + 1 {
-            allLabels.append(Array(repeatElement(GridCell(), count: seq1.count + 2)))
+            allCells.append(Array(repeatElement(GridCell(), count: seq1.count + 2)))
         }
         
         for i in 0...seq2.count + 1 {
@@ -72,8 +96,8 @@ class ViewController: UIViewController {
                 default: // Main part of the grid, where we place all numbers
                     cell.text = String(alignment.scores[i - 1][j - 1])
                     cell.origin = alignment.paths[i - 1][j - 1]
-                    customize(cell, isHeader: false)
-                    allLabels[i][j] = cell
+                    customize(cell)
+                    allCells[i][j] = cell
                 }
                 stack.addArrangedSubview(cell)
             }
@@ -111,18 +135,40 @@ class ViewController: UIViewController {
         for k in 0..<seq.count {
             let cell = GridCell()
             cell.text = String(seq[k])
-            customize(cell, isHeader: true)
+            customize(cell, isResult: true)
             resultCells[row][k] = cell
             stack.addArrangedSubview(cell)
         }
     }
     
-    private func customize(_ cell: GridCell, isHeader: Bool) {
+    private func customize(_ cell: GridCell, isHeader: Bool = false, isResult: Bool = false) {
         if isHeader {
             cell.mainLabel.font = UIFont(name:"Avenir-Medium", size: 30)
             cell.view.backgroundColor = .white
+        } else if isResult {
+            cell.mainLabel.font = UIFont(name:"Avenir-Medium", size: 30)
+            cell.color = .darkGray
         } else {
             cell.color = .darkGray
+        }
+    }
+    
+}
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField {
+        case matchText, substitutionText, gapText:
+            if textField.text == nil || Int(textField.text!) == nil {
+                textField.text = "0"
+            }
+        case firstText, secondText:
+            if textField.text == nil || textField.text! == "" {
+                textField.text = "GATTACA"
+            }
+        default:
+            break
         }
     }
     

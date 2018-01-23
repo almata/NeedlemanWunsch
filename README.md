@@ -6,8 +6,8 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/Needleman–Wunsch_algorithm)
 
 This iOS app tries to be helpful for bioinformatics students to understand how the Needleman–Wunsch algorithm works, and has been programmed by Albert Mata, a bioinformatics student himself at UOC (Open University of Catalonia). The way it works is pretty straightforward: fill in the two sequences you want to align, optionally adjust the match/substitution/gap scoring system and tap on __Find global alignment__ (which actually happens to be the only button in the app). You will get the actual alignment (or one of them if there are more than one with the same score), its score and the grid.
 
-<img src="https://github.com/almata/NeedlemanWunsch/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-01-23%20at%2011.29.29.png" width="414" style="border-style: solid; border-width: 1px;" />
+<img src="https://github.com/almata/NeedlemanWunsch/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-01-23%20at%2011.29.29.png" width="375" />
 &nbsp;
-<img src="https://github.com/almata/NeedlemanWunsch/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-01-23%20at%2011.30.28.png" width="414" style="border-style: solid; border-width: 1px;" />
+<img src="https://github.com/almata/NeedlemanWunsch/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-01-23%20at%2011.30.28.png" width="375" />
 
 The app is available [on the App Store]() _(to be added once Apple approves the app)_.

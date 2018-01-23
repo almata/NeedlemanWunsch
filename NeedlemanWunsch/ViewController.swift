@@ -8,81 +8,95 @@
 
 import UIKit
 
-// A LA LÍNIA allLabels[i][j] = cell CAL REPASSAR QUINES CEL·LES CAL GUARDAR I QUINES NO CAL, SEGONS LES
-// ANIMACIONS QUE ES TINGUI INTENCIÓ DE FER DESPRÉS.
-
 class ViewController: UIViewController {
 
     var alignment = needlemanWunsch(input1: "TGCTCGTA", input2: "TTCATA")
     
     @IBOutlet weak var firstText: UITextField!
     @IBOutlet weak var secondText: UITextField!
-    @IBOutlet weak var matchText: UITextField!
-    @IBOutlet weak var substitutionText: UITextField!
-    @IBOutlet weak var gapText: UITextField!
-    @IBOutlet weak var mainStackView: UIStackView!
-    @IBOutlet weak var resultStackView: UIStackView!
+    @IBOutlet weak var matrixView: UIView!
+    @IBOutlet weak var alignmentView: UIView!
+    @IBOutlet weak var matrixViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var alignmentViewHeightConstraint: NSLayoutConstraint!
     
-    var allCells: [[GridCell]] = []
-    var resultCells: [[GridCell]] = []
-    //var scoreLabels: [[UILabel]] = [] segurament quedarà com variable interna d'on sigui, sent subconjunt d'allLabels
+    @IBOutlet weak var alignmentScoreLabel: UILabel!
+    @IBOutlet weak var matchLabel: UILabel!
+    @IBOutlet weak var substitutionLabel: UILabel!
+    @IBOutlet weak var gapLabel: UILabel!
     
+    let maxCellSize: CGFloat = 40.0
+    var match = 5
+    var substitution = -2
+    var gap = -6
+    
+    var matrixCells: [[GridCell]] = []
+    var alignmentCells: [[GridCell]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createMainGrid()
-        createResultGrid()
-    }
-
-    @IBAction func run() {
-        endEditingAllTextFields()
-        allCells = []
-        resultCells = []
-        for view in mainStackView.arrangedSubviews { view.removeFromSuperview() }
-        for view in resultStackView.arrangedSubviews { view.removeFromSuperview() }
-        
-        let match = Int(self.matchText.text!)!
-        let substitution = Int(self.substitutionText.text!)!
-        let gap = Int(self.gapText.text!)!
-        let input1 = self.firstText.text!
-        let input2 = self.secondText.text!
-        
-        alignment = needlemanWunsch(input1: input1, input2: input2, match: match, substitution: substitution, gap: gap)
-        
-        createMainGrid()
-        createResultGrid()
+        run()
     }
     
-    @IBAction func demonstrate() {
+    @IBAction func matchChanged(_ sender: UISlider) {
+        match = Int(sender.value)
+        matchLabel.text = "Match: \(match)"
+    }
+    
+    @IBAction func substitutionChanged(_ sender: UISlider) {
+        substitution = Int(sender.value)
+        substitutionLabel.text = "Substitution: \(substitution)"
+    }
+    
+    @IBAction func gapChanged(_ sender: UISlider) {
+        gap = Int(sender.value)
+        gapLabel.text = "Gap: \(gap)"
+    }
+    
+    @IBAction func textChanged(_ sender: UITextField) {
+        let t = sender.text!
+        if t.count > 10 {
+            sender.text = String(t[..<t.index(t.startIndex, offsetBy: 10)])
+        }
+    }
+    
+    @IBAction func run() {
         endEditingAllTextFields()
+
+        for view in matrixView.subviews { view.removeFromSuperview() }
+        for view in alignmentView.subviews { view.removeFromSuperview() }
+        
+        matrixCells = []
+        alignmentCells = []
+        
+        var input1 = self.firstText.text!
+        var input2 = self.secondText.text!
+        if input1.count < input2.count { swap(&input1, &input2) }
+    
+        alignment = needlemanWunsch(input1: input1, input2: input2, match: match, substitution: substitution, gap: gap)
+
+        fillMatrix()
+        fillAlignment()
+        alignmentScoreLabel.text = "   Alignment (score: \(alignment.score))"
     }
     
     private func endEditingAllTextFields() {
-        textFieldDidEndEditing(matchText)
-        textFieldDidEndEditing(substitutionText)
-        textFieldDidEndEditing(gapText)
         textFieldDidEndEditing(firstText)
         textFieldDidEndEditing(secondText)
         view.endEditing(true)
     }
     
-    private func createMainGrid() {
+    private func fillMatrix() {
         let seq1 = Array(alignment.input1) // Horizontal, so its length sets number of columns (j)
         let seq2 = Array(alignment.input2) // Vertical, so its length sets number of rows (i)
 
         for _ in 0...seq2.count + 1 {
-            allCells.append(Array(repeatElement(GridCell(), count: seq1.count + 2)))
+            matrixCells.append(Array(repeatElement(GridCell(), count: seq1.count + 2)))
         }
         
         for i in 0...seq2.count + 1 {
-            let stack = UIStackView()
-            stack.axis = .horizontal
-            stack.distribution = .fillEqually
-            stack.spacing = 1
-            mainStackView.addArrangedSubview(stack)
-            
             for j in 0...seq1.count + 1 {
                 let cell = GridCell()
+                matrixCells[i][j] = cell
                 switch (i, j) {
                 case (0, 0...1), (0...1, 0):
                     cell.text = ""
@@ -97,47 +111,58 @@ class ViewController: UIViewController {
                     cell.text = String(alignment.scores[i - 1][j - 1])
                     cell.origin = alignment.paths[i - 1][j - 1]
                     customize(cell)
-                    allCells[i][j] = cell
                 }
-                stack.addArrangedSubview(cell)
             }
         }
+
+        let dim = min(UIScreen.main.bounds.width / CGFloat(matrixCells[0].count), maxCellSize)
+        matrixViewHeightConstraint.constant = CGFloat(matrixCells.count) * dim
+        putCells(matrixCells, into: matrixView)
     }
     
-    private func createResultGrid() {
+    private func fillAlignment() {
         let num = Array(alignment.output1).count
         
-        for _ in 0...2 { resultCells.append(Array(repeatElement(GridCell(), count: num))) }
+        for _ in 0...2 { alignmentCells.append(Array(repeatElement(GridCell(), count: num))) }
         
         addOutput(alignment.output1, atRow: 0)
         addOutput(alignment.output2, atRow: 1)
         addOutput(String(repeating: Character(" "), count: num), atRow: 2)
         
         for k in 0..<num {
-            if resultCells[0][k].text == resultCells[1][k].text {
-                resultCells[2][k].text = String(5)
-            } else if resultCells[0][k].text == "-" || resultCells[1][k].text == "-" {
-                resultCells[2][k].text = String(-6)
+            if alignmentCells[0][k].text == alignmentCells[1][k].text {
+                alignmentCells[2][k].text = String(match)
+            } else if alignmentCells[0][k].text == "-" || alignmentCells[1][k].text == "-" {
+                alignmentCells[2][k].text = String(gap)
             } else {
-                resultCells[2][k].text = String(-2)
+                alignmentCells[2][k].text = String(substitution)
+            }
+        }
+
+        let dim = min(UIScreen.main.bounds.width / CGFloat(alignmentCells[0].count), maxCellSize)
+        alignmentViewHeightConstraint.constant = 3 * dim
+        putCells(alignmentCells, into: alignmentView)
+    }
+    
+    private func putCells(_ cells: [[GridCell]], into container: UIView) {
+        let dim = min(UIScreen.main.bounds.width / CGFloat(cells[0].count), maxCellSize)
+        let x = (UIScreen.main.bounds.width - CGFloat(cells[0].count) * dim) / 2
+        
+        for i in 0..<cells.count {
+            for j in 0..<cells[i].count {
+                cells[i][j].frame = CGRect(x: x + CGFloat(j) * dim, y: CGFloat(i) * dim, width: dim, height: dim)
+                container.addSubview(cells[i][j])
             }
         }
     }
     
     private func addOutput(_ output: String, atRow row: Int) {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        stack.distribution = .fillEqually
-        stack.spacing = 1
-        resultStackView.addArrangedSubview(stack)
-        
         let seq = Array(output)
         for k in 0..<seq.count {
             let cell = GridCell()
+            alignmentCells[row][k] = cell
             cell.text = String(seq[k])
             customize(cell, isResult: true)
-            resultCells[row][k] = cell
-            stack.addArrangedSubview(cell)
         }
     }
     
@@ -158,17 +183,12 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        switch textField {
-        case matchText, substitutionText, gapText:
-            if textField.text == nil || Int(textField.text!) == nil {
-                textField.text = "0"
-            }
-        case firstText, secondText:
-            if textField.text == nil || textField.text! == "" {
-                textField.text = "GATTACA"
-            }
-        default:
-            break
+        if textField.text == nil || textField.text! == "" {
+            textField.text = "GATTACA"
+        }
+        
+        if textField.text!.count < 3 {
+            textField.text = textField.text! + repeatElement("A", count: 3 - textField.text!.count)
         }
     }
     

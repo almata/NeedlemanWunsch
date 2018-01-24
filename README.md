@@ -8,4 +8,4 @@ This iOS app tries to be helpful for bioinformatics students to understand how t
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/almata/NeedlemanWunsch/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-01-23%20at%2011.29.29.png" width="375" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/almata/NeedlemanWunsch/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-01-23%20at%2011.30.28.png" width="375" />
 
-The app is available [on the App Store]() _(to be added once Apple approves the app)_.
+The app is available [on the App Store](https://itunes.apple.com/us/app/needleman/id1338849867?mt=8).

@@ -169,10 +169,8 @@ class ViewController: UIViewController {
     private func customize(_ cell: GridCell, isHeader: Bool = false, isResult: Bool = false) {
         if isHeader {
             cell.mainLabel.font = UIFont(name:"Avenir-Medium", size: 30)
-            cell.view.backgroundColor = .white
         } else if isResult {
             cell.mainLabel.font = UIFont(name:"Avenir-Medium", size: 30)
-            cell.color = .darkGray
         } else {
             cell.color = .darkGray
         }

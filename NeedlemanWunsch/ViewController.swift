@@ -7,13 +7,34 @@
 //
 
 import UIKit
+import AnimatedTextInput
+
+struct CustomTextInputStyle: AnimatedTextInputStyle {
+    let yPlaceholderPositionOffset: CGFloat = 0.0
+    var textAttributes: [String : Any]?
+    let activeColor = UIColor.init(red: 0.0, green: 133.0/255.0, blue: 0.0, alpha: 1.0)
+    let lineActiveColor = UIColor.init(red: 0.0, green: 133.0/255.0, blue: 0.0, alpha: 1.0)
+    let inactiveColor = UIColor.gray.withAlphaComponent(0.3)
+    let lineInactiveColor = UIColor.gray.withAlphaComponent(0.3)
+    let placeholderInactiveColor = UIColor.gray.withAlphaComponent(0.3)
+    let errorColor = UIColor.red
+    let textInputFont = UIFont(name:"Avenir-Medium", size: 24)!
+    let textInputFontColor = UIColor.init(red: 56.0/255.0, green: 56.0/255.0, blue: 56.0/255.0, alpha: 1.0)
+    let placeholderMinFontSize: CGFloat = 9
+    let counterLabelFont: UIFont? = UIFont.systemFont(ofSize: 12)
+    let leftMargin: CGFloat = 5
+    let topMargin: CGFloat = 20
+    let rightMargin: CGFloat = 10
+    let bottomMargin: CGFloat = 0
+    let yHintPositionOffset: CGFloat = 7
+}
 
 class ViewController: UIViewController {
 
     var alignment = needlemanWunsch(input1: "TGCTCGTA", input2: "TTCATA")
     
-    @IBOutlet weak var firstText: UITextField!
-    @IBOutlet weak var secondText: UITextField!
+    @IBOutlet weak var firstInput: AnimatedTextInput!
+    @IBOutlet weak var secondInput: AnimatedTextInput!
     @IBOutlet weak var matrixView: UIView!
     @IBOutlet weak var alignmentView: UIView!
     @IBOutlet weak var matrixViewHeightConstraint: NSLayoutConstraint!
@@ -34,6 +55,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstInput.type = .standard
+        firstInput.text = alignment.input1
+        firstInput.placeHolderText = "First sequence"
+        
+        secondInput.type = .standard
+        secondInput.text = alignment.input2
+        secondInput.placeHolderText = "Second sequence"
+        
+        firstInput.style = CustomTextInputStyle()
+        secondInput.style = CustomTextInputStyle()
+        
         run()
     }
     
@@ -68,8 +101,8 @@ class ViewController: UIViewController {
         matrixCells = []
         alignmentCells = []
         
-        var input1 = self.firstText.text!
-        var input2 = self.secondText.text!
+        var input1 = firstInput.text!
+        var input2 = secondInput.text!
         if input1.count < input2.count { swap(&input1, &input2) }
     
         alignment = needlemanWunsch(input1: input1, input2: input2, match: match, substitution: substitution, gap: gap)
@@ -80,8 +113,8 @@ class ViewController: UIViewController {
     }
     
     private func endEditingAllTextFields() {
-        textFieldDidEndEditing(firstText)
-        textFieldDidEndEditing(secondText)
+        //textFieldDidEndEditing(firstText)
+        //textFieldDidEndEditing(secondText)
         view.endEditing(true)
     }
     

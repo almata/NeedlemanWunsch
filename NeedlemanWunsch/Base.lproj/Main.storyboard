@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Needleman-Wunsch-->
         <scene sceneID="tne-QT-ifu">
@@ -57,38 +52,31 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hfm-FU-3bQ">
-                                                        <rect key="frame" x="16" y="48" width="29" height="32"/>
+                                                        <rect key="frame" x="16" y="42.5" width="29" height="43"/>
                                                         <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-VM-Nhh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="14"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="14" id="IeN-Sz-q0q"/>
+                                                                </constraints>
+                                                            </view>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dna" translatesAutoresizingMaskIntoConstraints="NO" id="9mT-SJ-82Z">
-                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                <rect key="frame" x="0.0" y="14" width="29" height="29"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="29" id="7qg-wo-lTA"/>
                                                                     <constraint firstAttribute="height" constant="29" id="aQv-O7-Gd9"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-VM-Nhh">
-                                                                <rect key="frame" x="0.0" y="29" width="29" height="3"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="3" id="IeN-Sz-q0q"/>
-                                                                </constraints>
-                                                            </view>
                                                         </subviews>
                                                     </stackView>
-                                                    <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TGCTCGTA" placeholder="First sequence" minimumFontSize="6" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N7L-cZ-PIO">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg3-c9-vrh" customClass="AnimatedTextInput" customModule="AnimatedTextInput">
                                                         <rect key="frame" x="53" y="41.5" width="322" height="45"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="8Ez-Ja-9dX"/>
+                                                            <constraint firstAttribute="height" constant="45" id="I0U-Sa-1Tg"/>
                                                         </constraints>
-                                                        <color key="textColor" red="0.0" green="0.53333333329999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" smartDashesType="no"/>
-                                                        <connections>
-                                                            <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="mQi-ay-uvn"/>
-                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="q5M-mC-ole"/>
-                                                        </connections>
-                                                    </textField>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xRF-Kh-2ew">
@@ -102,38 +90,31 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YQP-uB-9jO">
-                                                        <rect key="frame" x="16" y="9" width="29" height="32"/>
+                                                        <rect key="frame" x="16" y="3.5" width="29" height="43"/>
                                                         <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kzy-QD-koT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="14"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="14" id="mtb-FC-lBe"/>
+                                                                </constraints>
+                                                            </view>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dna" translatesAutoresizingMaskIntoConstraints="NO" id="wjo-kM-0gN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                <rect key="frame" x="0.0" y="14" width="29" height="29"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="29" id="LLX-fF-332"/>
                                                                     <constraint firstAttribute="width" constant="29" id="Px2-iA-zZP"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kzy-QD-koT">
-                                                                <rect key="frame" x="0.0" y="29" width="29" height="3"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="3" id="mtb-FC-lBe"/>
-                                                                </constraints>
-                                                            </view>
                                                         </subviews>
                                                     </stackView>
-                                                    <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TTCATA" placeholder="Second sequence" minimumFontSize="6" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Pl8-ML-hyu">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDf-bK-eGh" customClass="AnimatedTextInput" customModule="AnimatedTextInput">
                                                         <rect key="frame" x="53" y="2.5" width="322" height="45"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="tco-kN-ng9"/>
+                                                            <constraint firstAttribute="height" constant="45" id="ZeW-t3-ynS"/>
                                                         </constraints>
-                                                        <color key="textColor" red="0.0" green="0.53333333329999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" smartDashesType="no"/>
-                                                        <connections>
-                                                            <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Wez-qe-Qjz"/>
-                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="msr-Ou-wnm"/>
-                                                        </connections>
-                                                    </textField>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKE-vu-d4b">
@@ -340,12 +321,12 @@
                         <outlet property="alignmentScoreLabel" destination="kBG-tG-eXW" id="DTE-1c-DFA"/>
                         <outlet property="alignmentView" destination="nn5-mX-kj5" id="kIw-lQ-5GA"/>
                         <outlet property="alignmentViewHeightConstraint" destination="f2b-dG-lye" id="1CZ-sP-ND6"/>
-                        <outlet property="firstText" destination="N7L-cZ-PIO" id="3ag-TY-bJc"/>
+                        <outlet property="firstInput" destination="xg3-c9-vrh" id="crG-nr-5kT"/>
                         <outlet property="gapLabel" destination="PXi-Bu-qm9" id="SVA-U5-mmr"/>
                         <outlet property="matchLabel" destination="sg3-Wv-njT" id="N9X-s3-IrZ"/>
                         <outlet property="matrixView" destination="Tlc-Yb-2uC" id="qRH-u0-S88"/>
                         <outlet property="matrixViewHeightConstraint" destination="Hpt-tW-wbo" id="Lew-nt-MCP"/>
-                        <outlet property="secondText" destination="Pl8-ML-hyu" id="NlK-Th-2Ph"/>
+                        <outlet property="secondInput" destination="rDf-bK-eGh" id="4cB-d7-U7a"/>
                         <outlet property="substitutionLabel" destination="NzE-MD-7yA" id="jk1-QD-xdu"/>
                     </connections>
                 </viewController>

@@ -66,7 +66,6 @@ class ViewController: UIViewController {
     }
     
     private func setupAnimatedTextInput(_ ati: AnimatedTextInput, textField: AnimatedTextField, text: String, placeHolderText: String) {
-        textField.delegate = self
         textField.clearButtonMode = .whileEditing
         textField.autocapitalizationType = .allCharacters
         textField.addTarget(self, action: #selector(textChanged), for: UIControlEvents.editingChanged)
@@ -74,6 +73,7 @@ class ViewController: UIViewController {
         ati.style = CustomTextInputStyle()
         ati.text = text
         ati.placeHolderText = placeHolderText
+        ati.delegate = self
     }
     
     @IBAction func matchChanged(_ sender: UISlider) {
@@ -119,8 +119,8 @@ class ViewController: UIViewController {
     }
     
     private func endEditingAllTextFields() {
-        textFieldDidEndEditing(firstTextField)
-        textFieldDidEndEditing(secondTextField)
+        animatedTextInputDidEndEditing(animatedTextInput: firstInput)
+        animatedTextInputDidEndEditing(animatedTextInput: secondInput)
         view.endEditing(true)
     }
     
@@ -217,15 +217,15 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UITextFieldDelegate {
+extension ViewController: AnimatedTextInputDelegate {
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField.text == nil || textField.text! == "" {
-            textField.text = "GATTACA"
+    func animatedTextInputDidEndEditing(animatedTextInput: AnimatedTextInput) {
+        if animatedTextInput.text == nil || animatedTextInput.text! == "" {
+            animatedTextInput.text = "GATTACA"
         }
         
-        if textField.text!.count < 3 {
-            textField.text = textField.text! + repeatElement("A", count: 3 - textField.text!.count)
+        if animatedTextInput.text!.count < 3 {
+            animatedTextInput.text = animatedTextInput.text! + repeatElement("A", count: 3 - animatedTextInput.text!.count)
         }
     }
     

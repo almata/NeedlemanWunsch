@@ -24,7 +24,7 @@ struct CustomTextInputStyle: AnimatedTextInputStyle {
     let counterLabelFont: UIFont? = UIFont.systemFont(ofSize: 12)
     let leftMargin: CGFloat = 5
     let topMargin: CGFloat = 20
-    let rightMargin: CGFloat = 10
+    let rightMargin: CGFloat = 18
     let bottomMargin: CGFloat = 0
     let yHintPositionOffset: CGFloat = 7
 }
@@ -45,6 +45,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var substitutionLabel: UILabel!
     @IBOutlet weak var gapLabel: UILabel!
     
+    let firstTextField = AnimatedTextField()
+    let secondTextField = AnimatedTextField()
+    
     let maxCellSize: CGFloat = 40.0
     var match = 5
     var substitution = -2
@@ -56,18 +59,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstInput.type = .standard
-        firstInput.text = alignment.input1
-        firstInput.placeHolderText = "First sequence"
-        
-        secondInput.type = .standard
-        secondInput.text = alignment.input2
-        secondInput.placeHolderText = "Second sequence"
-        
-        firstInput.style = CustomTextInputStyle()
-        secondInput.style = CustomTextInputStyle()
+        setupAnimatedTextInput(firstInput, textField: firstTextField, text: alignment.input1, placeHolderText: "First sequence")
+        setupAnimatedTextInput(secondInput, textField: secondTextField, text: alignment.input2, placeHolderText: "Second sequence")
         
         run()
+    }
+    
+    private func setupAnimatedTextInput(_ ati: AnimatedTextInput, textField: AnimatedTextField, text: String, placeHolderText: String) {
+        textField.delegate = self
+        textField.clearButtonMode = .whileEditing
+        textField.autocapitalizationType = .allCharacters
+        textField.addTarget(self, action: #selector(textChanged), for: UIControlEvents.editingChanged)
+        ati.type = .generic(textInput: textField)
+        ati.style = CustomTextInputStyle()
+        ati.text = text
+        ati.placeHolderText = placeHolderText
     }
     
     @IBAction func matchChanged(_ sender: UISlider) {
@@ -85,7 +91,7 @@ class ViewController: UIViewController {
         gapLabel.text = "Gap: \(gap)"
     }
     
-    @IBAction func textChanged(_ sender: UITextField) {
+    @objc private func textChanged(_ sender: UITextField) {
         let t = sender.text!
         if t.count > 10 {
             sender.text = String(t[..<t.index(t.startIndex, offsetBy: 10)])
@@ -113,8 +119,8 @@ class ViewController: UIViewController {
     }
     
     private func endEditingAllTextFields() {
-        //textFieldDidEndEditing(firstText)
-        //textFieldDidEndEditing(secondText)
+        textFieldDidEndEditing(firstTextField)
+        textFieldDidEndEditing(secondTextField)
         view.endEditing(true)
     }
     

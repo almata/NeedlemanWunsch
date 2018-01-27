@@ -12,8 +12,8 @@ import AnimatedTextInput
 struct CustomTextInputStyle: AnimatedTextInputStyle {
     let yPlaceholderPositionOffset: CGFloat = 0.0
     var textAttributes: [String : Any]?
-    let activeColor = UIColor.init(red: 0.0, green: 133.0/255.0, blue: 0.0, alpha: 1.0)
-    let lineActiveColor = UIColor.init(red: 0.0, green: 133.0/255.0, blue: 0.0, alpha: 1.0)
+    let activeColor = UIColor.init(red: 3.0/255.0, green: 166.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+    let lineActiveColor = UIColor.init(red: 3.0/255.0, green: 166.0/255.0, blue: 245.0/255.0, alpha: 0.6)
     let inactiveColor = UIColor.gray.withAlphaComponent(0.3)
     let lineInactiveColor = UIColor.gray.withAlphaComponent(0.3)
     let placeholderInactiveColor = UIColor.gray.withAlphaComponent(0.3)
@@ -26,7 +26,7 @@ struct CustomTextInputStyle: AnimatedTextInputStyle {
     let topMargin: CGFloat = 20
     let rightMargin: CGFloat = 18
     let bottomMargin: CGFloat = 0
-    let yHintPositionOffset: CGFloat = 7
+    let yHintPositionOffset: CGFloat = 10
 }
 
 class ViewController: UIViewController {

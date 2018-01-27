@@ -40,7 +40,7 @@
                 </label>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGC-fu-OYv" userLabel="TopView">
                     <rect key="frame" x="140.5" y="-4" width="1" height="8"/>
-                    <color key="backgroundColor" red="0.92753906249999996" green="0.17254901959999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.011764705882352941" green="0.65098039215686276" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="6jQ-my-Qp0"/>
                         <constraint firstAttribute="height" constant="8" id="s9L-Tl-ewR"/>
@@ -48,7 +48,7 @@
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17G-al-BFx" userLabel="LeftView">
                     <rect key="frame" x="-5" y="98" width="8" height="1"/>
-                    <color key="backgroundColor" red="0.92753906249999996" green="0.17254901959999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.011764705882352941" green="0.65098039215686276" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="8" id="mzk-Fa-6XA"/>
                         <constraint firstAttribute="height" constant="1" id="uoH-aZ-eRI"/>
@@ -56,7 +56,7 @@
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3h-Ia-fUz" userLabel="DiagonalView">
                     <rect key="frame" x="-1" y="-5" width="1" height="9"/>
-                    <color key="backgroundColor" red="0.92753906249999996" green="0.17254901959999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.011764705882352941" green="0.65098039215686276" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="r7b-NG-9ga"/>
                         <constraint firstAttribute="height" constant="9" id="xkx-sn-3ga"/>

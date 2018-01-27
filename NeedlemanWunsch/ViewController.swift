@@ -9,19 +9,25 @@
 import UIKit
 import AnimatedTextInput
 
-let mainColor = UIColor.init(red: 3.0/255.0, green: 166.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+struct Colors {
+    static let blue = UIColor.init(red: 3.0/255.0, green: 166.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+    static let red = UIColor.init(red: 241.0/255.0, green: 107.0/255.0, blue: 111.0/255.0, alpha: 1.0)
+    static let green = UIColor.init(red: 170.0/255.0, green: 205.0/255.0, blue: 110.0/255.0, alpha: 1.0)
+    static let gray = UIColor.init(red: 102.0/255.0, green: 102.0/255.0, blue: 102.0/255.0, alpha: 1.0)
+    static let black = UIColor.init(red: 50.0/255.0, green: 43.0/255.0, blue: 38.0/255.0, alpha: 1.0)
+}
 
 struct CustomTextInputStyle: AnimatedTextInputStyle {
     let yPlaceholderPositionOffset: CGFloat = 0.0
     var textAttributes: [String : Any]?
-    let activeColor = mainColor
-    let lineActiveColor = mainColor
+    let activeColor = Colors.blue
+    let lineActiveColor = Colors.blue
     let inactiveColor = UIColor.gray.withAlphaComponent(0.3)
     let lineInactiveColor = UIColor.gray.withAlphaComponent(0.3)
     let placeholderInactiveColor = UIColor.gray.withAlphaComponent(0.3)
     let errorColor = UIColor.red
     let textInputFont = UIFont(name:"Avenir-Medium", size: 24)!
-    let textInputFontColor = UIColor.init(red: 56.0/255.0, green: 56.0/255.0, blue: 56.0/255.0, alpha: 1.0)
+    let textInputFontColor = Colors.black
     let placeholderMinFontSize: CGFloat = 9
     let counterLabelFont: UIFont? = UIFont.systemFont(ofSize: 12)
     let leftMargin: CGFloat = 5
@@ -50,6 +56,7 @@ class ViewController: UIViewController {
     let firstTextField = AnimatedTextField()
     let secondTextField = AnimatedTextField()
     
+    let kerning = 3
     let maxCellSize: CGFloat = 40.0
     var match = 5
     var substitution = -2
@@ -68,14 +75,22 @@ class ViewController: UIViewController {
     }
     
     private func setupAnimatedTextInput(_ ati: AnimatedTextInput, textField: AnimatedTextField, text: String, placeHolderText: String) {
+        // AnimatedTextField (UITextField)
         textField.clearButtonMode = .whileEditing
         textField.autocapitalizationType = .allCharacters
         textField.addTarget(self, action: #selector(textChanged), for: UIControlEvents.editingChanged)
+        
+        // AnimatedTextInput
         ati.type = .generic(textInput: textField)
         ati.style = CustomTextInputStyle()
         ati.text = text
         ati.placeHolderText = placeHolderText
         ati.delegate = self
+        
+        // Kerning
+        let attributedString = NSMutableAttributedString(string: text)
+        attributedString.addAttribute(.kern, value: kerning, range: NSMakeRange(0, text.count))
+        textField.attributedText = attributedString
     }
     
     @IBAction func matchChanged(_ sender: UISlider) {
@@ -173,10 +188,13 @@ class ViewController: UIViewController {
         for k in 0..<num {
             if alignmentCells[0][k].text == alignmentCells[1][k].text {
                 alignmentCells[2][k].text = String(match)
+                alignmentCells[2][k].color = Colors.green
             } else if alignmentCells[0][k].text == "-" || alignmentCells[1][k].text == "-" {
                 alignmentCells[2][k].text = String(gap)
+                alignmentCells[2][k].color = Colors.red
             } else {
                 alignmentCells[2][k].text = String(substitution)
+                alignmentCells[2][k].color = Colors.red
             }
         }
 
@@ -213,7 +231,7 @@ class ViewController: UIViewController {
         } else if isResult {
             cell.mainLabel.font = UIFont(name:"Avenir-Medium", size: 30)
         } else {
-            cell.color = .darkGray
+            cell.color = Colors.gray
         }
     }
     
@@ -231,4 +249,14 @@ extension ViewController: AnimatedTextInputDelegate {
         }
     }
     
+    func animatedTextInputDidChange(animatedTextInput: AnimatedTextInput) {
+        let attributedString = NSMutableAttributedString(string: animatedTextInput.text!)
+        attributedString.addAttribute(.kern, value: kerning, range: NSMakeRange(0, animatedTextInput.text!.count))
+        if animatedTextInput == firstInput {
+            firstTextField.attributedText = attributedString
+        } else {
+            secondTextField.attributedText = attributedString
+        }
+    }
+
 }

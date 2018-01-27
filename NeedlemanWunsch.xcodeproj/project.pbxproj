@@ -79,6 +79,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		40524B4C201CCE3100925DD1 /* AuxiliarStuff */ = {
+			isa = PBXGroup;
+			children = (
+				406FA84E1FEAB9DE001D572A /* XibLoadingView.swift */,
+				406FA82E1FEAA4B5001D572A /* AppDelegate.swift */,
+				406FA8351FEAA4B5001D572A /* Assets.xcassets */,
+				406FA8371FEAA4B5001D572A /* LaunchScreen.storyboard */,
+			);
+			path = AuxiliarStuff;
+			sourceTree = "<group>";
+		};
 		406FA8221FEAA4B5001D572A = {
 			isa = PBXGroup;
 			children = (
@@ -102,17 +113,14 @@
 		406FA82D1FEAA4B5001D572A /* NeedlemanWunsch */ = {
 			isa = PBXGroup;
 			children = (
-				406FA82E1FEAA4B5001D572A /* AppDelegate.swift */,
+				40524B4C201CCE3100925DD1 /* AuxiliarStuff */,
 				406FA8301FEAA4B5001D572A /* ViewController.swift */,
-				406FA8321FEAA4B5001D572A /* Main.storyboard */,
-				406FA8351FEAA4B5001D572A /* Assets.xcassets */,
-				406FA8371FEAA4B5001D572A /* LaunchScreen.storyboard */,
-				406FA83A1FEAA4B5001D572A /* Info.plist */,
-				406FA84E1FEAB9DE001D572A /* XibLoadingView.swift */,
-				406FA8501FEABA73001D572A /* GridCell.swift */,
-				406FA8521FEABADC001D572A /* GridCell.xib */,
-				400976E81FED66560031E28F /* NeedlemanWunsch.swift */,
 				408490F01FEE42D90007CF62 /* InfoViewController.swift */,
+				406FA8321FEAA4B5001D572A /* Main.storyboard */,
+				406FA8521FEABADC001D572A /* GridCell.xib */,
+				406FA8501FEABA73001D572A /* GridCell.swift */,
+				400976E81FED66560031E28F /* NeedlemanWunsch.swift */,
+				406FA83A1FEAA4B5001D572A /* Info.plist */,
 			);
 			path = NeedlemanWunsch;
 			sourceTree = "<group>";

@@ -14,7 +14,7 @@ class InfoViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.navigationController?.navigationBar.tintColor = UIColor.init(red: 3.0/255.0, green: 166.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = mainColor
         mainText.setContentOffset(.zero, animated: false)
         
         let text = mainText.attributedText.string

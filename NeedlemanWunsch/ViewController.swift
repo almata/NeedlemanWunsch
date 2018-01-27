@@ -242,6 +242,7 @@ extension ViewController: AnimatedTextInputDelegate {
     func animatedTextInputDidEndEditing(animatedTextInput: AnimatedTextInput) {
         if animatedTextInput.text == nil || animatedTextInput.text! == "" {
             animatedTextInput.text = "GATTACA"
+            animatedTextInputDidChange(animatedTextInput: animatedTextInput)
         }
         
         if animatedTextInput.text!.count < 3 {

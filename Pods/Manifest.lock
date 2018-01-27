@@ -1,0 +1,12 @@
+PODS:
+  - AnimatedTextInput (0.5.2)
+
+DEPENDENCIES:
+  - AnimatedTextInput (~> 0.5.2)
+
+SPEC CHECKSUMS:
+  AnimatedTextInput: bb004a2bc7eda53d701e585868dcd87813acfceb
+
+PODFILE CHECKSUM: af6f04419882f6f7ff9c06a7b8573e768ce5d723
+
+COCOAPODS: 1.4.0

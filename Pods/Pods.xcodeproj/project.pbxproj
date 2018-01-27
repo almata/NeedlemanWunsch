@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07BB269F69E71217351587EEC69707BD /* disclosure@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3DC233B71ED924CC34EA7FA3E7F6672 /* disclosure@3x.png */; };
+		1B7E77B32AAE7899D7EF9B7AE2B077CC /* AnimatedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38A830535C72E3D6918F27D0A946C86 /* AnimatedLine.swift */; };
+		2652608ABB28FC91B70679A96721F41B /* cm_icon_input_eye_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F81AFCAA51CC3CFEF4D38D9E009173 /* cm_icon_input_eye_selected@3x.png */; };
+		29EE5DFEEC29160DC0405492746E8A4B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010637D2CDDABA6B89CA5D8346E7DE51 /* UIViewExtensions.swift */; };
+		3661DAB3085FDF55133E31BDDEC906F4 /* disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 183D0AA4D19690DEA8F7D4B2BDB3A786 /* disclosure@2x.png */; };
+		5D19EC0B09CF18FFC749FC057C38FBD4 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A795DA04381CD4DE985D2F771CCEBE /* disclosure.png */; };
+		69300F39CA836067AD5DD7CC17EF9DA5 /* Pods-NeedlemanWunsch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 567B5F3E52E156682EC5CF63000C93E1 /* Pods-NeedlemanWunsch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2AA015BEAC3885984D1305EB0A64C6 /* AnimatedTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3979D1E04DCB7637A234B650F26E8AF2 /* AnimatedTextInput.swift */; };
+		7250209A4BFB6EC5A986F0E6D795D344 /* cm_icon_input_eye_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F362C3858EAE26AC530AFE9B5017C35B /* cm_icon_input_eye_normal@2x.png */; };
+		77EE9D2CDCBB8C464C4A189DC248FBE6 /* AnimatedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588101330A264B97C95C5F82793D9699 /* AnimatedTextView.swift */; };
+		88BF95742340069C38EA4B5839C405BD /* AnimatedTextInputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49DF9BEAC65268C7C2BAC26A13BFBE6 /* AnimatedTextInputStyle.swift */; };
+		8E565B5FDC9E892169648DC6396663E0 /* AnimatedTextInput.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C99E3FCD7B461798CDF37F7FCE083B83 /* AnimatedTextInput.bundle */; };
+		B640A00025FEE391CC1AFFF14463408B /* cm_icon_input_eye_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC0F6F9DFBB09224706AFD716A05950 /* cm_icon_input_eye_normal@3x.png */; };
+		BDBADCA66A632D0A60501BBD0D750538 /* cm_icon_input_eye_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF0BB3A1F2AEED9BD10C00429991C38 /* cm_icon_input_eye_selected@2x.png */; };
+		CB22F57C9B275781903EAC0DE1014D77 /* AnimatedTextInput-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB6303FB2C8133AC40D218D4BB82AB1E /* AnimatedTextInput-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF61DADBFC3CC8CD9CC019B5457D820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EA3A7EB5AC6CA7534425F6A893E48072 /* AnimatedTextInput-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD904EF5F65FB54C4AE63A4B24B3F5 /* AnimatedTextInput-dummy.m */; };
+		EADD570E11FCB7466E86B6F3D447CA71 /* AnimatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE00AA45AEAB5FA192130B46132D47 /* AnimatedTextField.swift */; };
+		F1571870943AF8DEBF3C95CFC541336B /* AnimatedTextInputFieldConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5DC93A0F4676F69ED28928567CEE67 /* AnimatedTextInputFieldConfigurator.swift */; };
+		F9A88F56721084D6C79EAE68FE85463C /* Pods-NeedlemanWunsch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB133FBD3A62CFA8A821A58FE35BF6 /* Pods-NeedlemanWunsch-dummy.m */; };
+		FEDA10F9C970520C985541026CFC9343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		771F4ABAD974A1D1EF7FE117B682EE9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29D8DB41194AB47BA5E0F5FE96529B16;
+			remoteInfo = AnimatedTextInput;
+		};
+		8652AACADFD9BE579A57C240B588A570 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C2E09E036949D84633EB63D09D7250C;
+			remoteInfo = "AnimatedTextInput-AnimatedTextInput";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		010637D2CDDABA6B89CA5D8346E7DE51 /* UIViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = AnimatedTextInput/Classes/UIViewExtensions.swift; sourceTree = "<group>"; };
+		106E1A06184AE7CDC4F9B8790664E9A1 /* AnimatedTextInput.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AnimatedTextInput.modulemap; sourceTree = "<group>"; };
+		183D0AA4D19690DEA8F7D4B2BDB3A786 /* disclosure@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "disclosure@2x.png"; path = "AnimatedTextInput/Assets/disclosure@2x.png"; sourceTree = "<group>"; };
+		3979D1E04DCB7637A234B650F26E8AF2 /* AnimatedTextInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedTextInput.swift; path = AnimatedTextInput/Classes/AnimatedTextInput.swift; sourceTree = "<group>"; };
+		40FE80CD66590765F3240E8FE10625B6 /* Pods-NeedlemanWunsch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NeedlemanWunsch.modulemap"; sourceTree = "<group>"; };
+		567B5F3E52E156682EC5CF63000C93E1 /* Pods-NeedlemanWunsch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NeedlemanWunsch-umbrella.h"; sourceTree = "<group>"; };
+		588101330A264B97C95C5F82793D9699 /* AnimatedTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedTextView.swift; path = AnimatedTextInput/Classes/AnimatedTextView.swift; sourceTree = "<group>"; };
+		619DAC0550C5673B39595A192D994275 /* AnimatedTextInput.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatedTextInput.xcconfig; sourceTree = "<group>"; };
+		65AE00AA45AEAB5FA192130B46132D47 /* AnimatedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedTextField.swift; path = AnimatedTextInput/Classes/AnimatedTextField.swift; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		677C97BB2BFBE637DC67DD5D9A959B4F /* Pods_NeedlemanWunsch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NeedlemanWunsch.framework; path = "Pods-NeedlemanWunsch.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69254B6779B48631552A0271D9B41E0E /* Pods-NeedlemanWunsch-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NeedlemanWunsch-resources.sh"; sourceTree = "<group>"; };
+		6CC0F6F9DFBB09224706AFD716A05950 /* cm_icon_input_eye_normal@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cm_icon_input_eye_normal@3x.png"; path = "AnimatedTextInput/Assets/cm_icon_input_eye_normal@3x.png"; sourceTree = "<group>"; };
+		7C3FEBDE096715017123D041AB704B0B /* Pods-NeedlemanWunsch-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NeedlemanWunsch-frameworks.sh"; sourceTree = "<group>"; };
+		7E5DC93A0F4676F69ED28928567CEE67 /* AnimatedTextInputFieldConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedTextInputFieldConfigurator.swift; path = AnimatedTextInput/Classes/AnimatedTextInputFieldConfigurator.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97737A14B62ADC625564AE5A1A0A0901 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9849600A35E6892D9D7EE922A169CD28 /* Pods-NeedlemanWunsch-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NeedlemanWunsch-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9AD26E7910F269CBB50041966DBE6029 /* Pods-NeedlemanWunsch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NeedlemanWunsch.release.xcconfig"; sourceTree = "<group>"; };
+		9D0F7E0AFEAA359CAF419D3CBA44231D /* AnimatedTextInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AnimatedTextInput.framework; path = AnimatedTextInput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4EB133FBD3A62CFA8A821A58FE35BF6 /* Pods-NeedlemanWunsch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NeedlemanWunsch-dummy.m"; sourceTree = "<group>"; };
+		B49DF9BEAC65268C7C2BAC26A13BFBE6 /* AnimatedTextInputStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedTextInputStyle.swift; path = AnimatedTextInput/Classes/AnimatedTextInputStyle.swift; sourceTree = "<group>"; };
+		BCF5BFF9F87B3E0D654E24E9CE3AB385 /* Pods-NeedlemanWunsch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NeedlemanWunsch.debug.xcconfig"; sourceTree = "<group>"; };
+		BFDF5F5983E2A793528D8096BC272B63 /* ResourceBundle-AnimatedTextInput-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AnimatedTextInput-Info.plist"; sourceTree = "<group>"; };
+		BFF0BB3A1F2AEED9BD10C00429991C38 /* cm_icon_input_eye_selected@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cm_icon_input_eye_selected@2x.png"; path = "AnimatedTextInput/Assets/cm_icon_input_eye_selected@2x.png"; sourceTree = "<group>"; };
+		C99E3FCD7B461798CDF37F7FCE083B83 /* AnimatedTextInput.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AnimatedTextInput.bundle; path = "AnimatedTextInput-AnimatedTextInput.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F81AFCAA51CC3CFEF4D38D9E009173 /* cm_icon_input_eye_selected@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cm_icon_input_eye_selected@3x.png"; path = "AnimatedTextInput/Assets/cm_icon_input_eye_selected@3x.png"; sourceTree = "<group>"; };
+		D38A830535C72E3D6918F27D0A946C86 /* AnimatedLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedLine.swift; path = AnimatedTextInput/Classes/AnimatedLine.swift; sourceTree = "<group>"; };
+		DF426D9D4A2D63FBE067D96995AE517B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2AD904EF5F65FB54C4AE63A4B24B3F5 /* AnimatedTextInput-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnimatedTextInput-dummy.m"; sourceTree = "<group>"; };
+		E33E3EF781C2C077F4BF2C0FC58C0166 /* AnimatedTextInput-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedTextInput-prefix.pch"; sourceTree = "<group>"; };
+		E3DC233B71ED924CC34EA7FA3E7F6672 /* disclosure@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "disclosure@3x.png"; path = "AnimatedTextInput/Assets/disclosure@3x.png"; sourceTree = "<group>"; };
+		F362C3858EAE26AC530AFE9B5017C35B /* cm_icon_input_eye_normal@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cm_icon_input_eye_normal@2x.png"; path = "AnimatedTextInput/Assets/cm_icon_input_eye_normal@2x.png"; sourceTree = "<group>"; };
+		F44C75CE26D4C508E85B779BEA7CA859 /* Pods-NeedlemanWunsch-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NeedlemanWunsch-acknowledgements.plist"; sourceTree = "<group>"; };
+		F5A795DA04381CD4DE985D2F771CCEBE /* disclosure.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = disclosure.png; path = AnimatedTextInput/Assets/disclosure.png; sourceTree = "<group>"; };
+		FB6303FB2C8133AC40D218D4BB82AB1E /* AnimatedTextInput-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedTextInput-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16A925A724EF787FDE748DDB71AE7A24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF61DADBFC3CC8CD9CC019B5457D820 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		567272B5B642A2B7FF6C2A16E146917E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDA10F9C970520C985541026CFC9343 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9031BDE56E150B98A1795CBB978443A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C6CC58EA45AFED34E54BE2E291658CF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F362C3858EAE26AC530AFE9B5017C35B /* cm_icon_input_eye_normal@2x.png */,
+				6CC0F6F9DFBB09224706AFD716A05950 /* cm_icon_input_eye_normal@3x.png */,
+				BFF0BB3A1F2AEED9BD10C00429991C38 /* cm_icon_input_eye_selected@2x.png */,
+				D0F81AFCAA51CC3CFEF4D38D9E009173 /* cm_icon_input_eye_selected@3x.png */,
+				F5A795DA04381CD4DE985D2F771CCEBE /* disclosure.png */,
+				183D0AA4D19690DEA8F7D4B2BDB3A786 /* disclosure@2x.png */,
+				E3DC233B71ED924CC34EA7FA3E7F6672 /* disclosure@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		12841C1FBAF93C8A1066C202FF0C2167 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C99E3FCD7B461798CDF37F7FCE083B83 /* AnimatedTextInput.bundle */,
+				9D0F7E0AFEAA359CAF419D3CBA44231D /* AnimatedTextInput.framework */,
+				677C97BB2BFBE637DC67DD5D9A959B4F /* Pods_NeedlemanWunsch.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E24F5C35A44A6FF978CF5BF751D9969 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				106E1A06184AE7CDC4F9B8790664E9A1 /* AnimatedTextInput.modulemap */,
+				619DAC0550C5673B39595A192D994275 /* AnimatedTextInput.xcconfig */,
+				E2AD904EF5F65FB54C4AE63A4B24B3F5 /* AnimatedTextInput-dummy.m */,
+				E33E3EF781C2C077F4BF2C0FC58C0166 /* AnimatedTextInput-prefix.pch */,
+				FB6303FB2C8133AC40D218D4BB82AB1E /* AnimatedTextInput-umbrella.h */,
+				97737A14B62ADC625564AE5A1A0A0901 /* Info.plist */,
+				BFDF5F5983E2A793528D8096BC272B63 /* ResourceBundle-AnimatedTextInput-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AnimatedTextInput";
+			sourceTree = "<group>";
+		};
+		310CC841CF68D66868264D61E22A141B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DA28CBDDBE38F9C7E77FE950102E8C1 /* Pods-NeedlemanWunsch */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5B8F6F17A4890541161BA19BC90F85DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF7D2589F5CFAD56AC4BADEEA9365C31 /* AnimatedTextInput */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5DA28CBDDBE38F9C7E77FE950102E8C1 /* Pods-NeedlemanWunsch */ = {
+			isa = PBXGroup;
+			children = (
+				DF426D9D4A2D63FBE067D96995AE517B /* Info.plist */,
+				40FE80CD66590765F3240E8FE10625B6 /* Pods-NeedlemanWunsch.modulemap */,
+				9849600A35E6892D9D7EE922A169CD28 /* Pods-NeedlemanWunsch-acknowledgements.markdown */,
+				F44C75CE26D4C508E85B779BEA7CA859 /* Pods-NeedlemanWunsch-acknowledgements.plist */,
+				A4EB133FBD3A62CFA8A821A58FE35BF6 /* Pods-NeedlemanWunsch-dummy.m */,
+				7C3FEBDE096715017123D041AB704B0B /* Pods-NeedlemanWunsch-frameworks.sh */,
+				69254B6779B48631552A0271D9B41E0E /* Pods-NeedlemanWunsch-resources.sh */,
+				567B5F3E52E156682EC5CF63000C93E1 /* Pods-NeedlemanWunsch-umbrella.h */,
+				BCF5BFF9F87B3E0D654E24E9CE3AB385 /* Pods-NeedlemanWunsch.debug.xcconfig */,
+				9AD26E7910F269CBB50041966DBE6029 /* Pods-NeedlemanWunsch.release.xcconfig */,
+			);
+			name = "Pods-NeedlemanWunsch";
+			path = "Target Support Files/Pods-NeedlemanWunsch";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				5B8F6F17A4890541161BA19BC90F85DA /* Pods */,
+				12841C1FBAF93C8A1066C202FF0C2167 /* Products */,
+				310CC841CF68D66868264D61E22A141B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DF7D2589F5CFAD56AC4BADEEA9365C31 /* AnimatedTextInput */ = {
+			isa = PBXGroup;
+			children = (
+				D38A830535C72E3D6918F27D0A946C86 /* AnimatedLine.swift */,
+				65AE00AA45AEAB5FA192130B46132D47 /* AnimatedTextField.swift */,
+				3979D1E04DCB7637A234B650F26E8AF2 /* AnimatedTextInput.swift */,
+				7E5DC93A0F4676F69ED28928567CEE67 /* AnimatedTextInputFieldConfigurator.swift */,
+				B49DF9BEAC65268C7C2BAC26A13BFBE6 /* AnimatedTextInputStyle.swift */,
+				588101330A264B97C95C5F82793D9699 /* AnimatedTextView.swift */,
+				010637D2CDDABA6B89CA5D8346E7DE51 /* UIViewExtensions.swift */,
+				0C6CC58EA45AFED34E54BE2E291658CF /* Resources */,
+				1E24F5C35A44A6FF978CF5BF751D9969 /* Support Files */,
+			);
+			name = AnimatedTextInput;
+			path = AnimatedTextInput;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		82E4C399B6F9A49ED206E60B76035B82 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69300F39CA836067AD5DD7CC17EF9DA5 /* Pods-NeedlemanWunsch-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838C8FE8CE83F1B956506A28F7B44545 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB22F57C9B275781903EAC0DE1014D77 /* AnimatedTextInput-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29D8DB41194AB47BA5E0F5FE96529B16 /* AnimatedTextInput */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6723FD1A2A748A0F35FC541F60968EAD /* Build configuration list for PBXNativeTarget "AnimatedTextInput" */;
+			buildPhases = (
+				D9989067B5FB0B1937A6479DED34F428 /* Sources */,
+				567272B5B642A2B7FF6C2A16E146917E /* Frameworks */,
+				CDD529DB75B0B4AA12E1E68159F4E8B7 /* Resources */,
+				838C8FE8CE83F1B956506A28F7B44545 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A7E4D8D6E4288B93C67B3124DC48BF8 /* PBXTargetDependency */,
+			);
+			name = AnimatedTextInput;
+			productName = AnimatedTextInput;
+			productReference = 9D0F7E0AFEAA359CAF419D3CBA44231D /* AnimatedTextInput.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5C6A83914728A1A10A7A26DA066511A5 /* Pods-NeedlemanWunsch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DD49E139F2F08D5299BCB5A32BB5A14 /* Build configuration list for PBXNativeTarget "Pods-NeedlemanWunsch" */;
+			buildPhases = (
+				A453F70F22B6EA97DA865C711589034E /* Sources */,
+				16A925A724EF787FDE748DDB71AE7A24 /* Frameworks */,
+				82E4C399B6F9A49ED206E60B76035B82 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F14A4E5CB5599029144EF3A6ECFB8EDE /* PBXTargetDependency */,
+			);
+			name = "Pods-NeedlemanWunsch";
+			productName = "Pods-NeedlemanWunsch";
+			productReference = 677C97BB2BFBE637DC67DD5D9A959B4F /* Pods_NeedlemanWunsch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8C2E09E036949D84633EB63D09D7250C /* AnimatedTextInput-AnimatedTextInput */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 674235A09C70949E5AA4A9002F03DF88 /* Build configuration list for PBXNativeTarget "AnimatedTextInput-AnimatedTextInput" */;
+			buildPhases = (
+				BBCD3D5B0E249126AC864C50584B0C30 /* Sources */,
+				9031BDE56E150B98A1795CBB978443A5 /* Frameworks */,
+				16268352D8D8A8ECECFD08069742D44D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AnimatedTextInput-AnimatedTextInput";
+			productName = "AnimatedTextInput-AnimatedTextInput";
+			productReference = C99E3FCD7B461798CDF37F7FCE083B83 /* AnimatedTextInput.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 12841C1FBAF93C8A1066C202FF0C2167 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29D8DB41194AB47BA5E0F5FE96529B16 /* AnimatedTextInput */,
+				8C2E09E036949D84633EB63D09D7250C /* AnimatedTextInput-AnimatedTextInput */,
+				5C6A83914728A1A10A7A26DA066511A5 /* Pods-NeedlemanWunsch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16268352D8D8A8ECECFD08069742D44D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7250209A4BFB6EC5A986F0E6D795D344 /* cm_icon_input_eye_normal@2x.png in Resources */,
+				B640A00025FEE391CC1AFFF14463408B /* cm_icon_input_eye_normal@3x.png in Resources */,
+				BDBADCA66A632D0A60501BBD0D750538 /* cm_icon_input_eye_selected@2x.png in Resources */,
+				2652608ABB28FC91B70679A96721F41B /* cm_icon_input_eye_selected@3x.png in Resources */,
+				5D19EC0B09CF18FFC749FC057C38FBD4 /* disclosure.png in Resources */,
+				3661DAB3085FDF55133E31BDDEC906F4 /* disclosure@2x.png in Resources */,
+				07BB269F69E71217351587EEC69707BD /* disclosure@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDD529DB75B0B4AA12E1E68159F4E8B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E565B5FDC9E892169648DC6396663E0 /* AnimatedTextInput.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A453F70F22B6EA97DA865C711589034E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9A88F56721084D6C79EAE68FE85463C /* Pods-NeedlemanWunsch-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCD3D5B0E249126AC864C50584B0C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9989067B5FB0B1937A6479DED34F428 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B7E77B32AAE7899D7EF9B7AE2B077CC /* AnimatedLine.swift in Sources */,
+				EADD570E11FCB7466E86B6F3D447CA71 /* AnimatedTextField.swift in Sources */,
+				EA3A7EB5AC6CA7534425F6A893E48072 /* AnimatedTextInput-dummy.m in Sources */,
+				6E2AA015BEAC3885984D1305EB0A64C6 /* AnimatedTextInput.swift in Sources */,
+				F1571870943AF8DEBF3C95CFC541336B /* AnimatedTextInputFieldConfigurator.swift in Sources */,
+				88BF95742340069C38EA4B5839C405BD /* AnimatedTextInputStyle.swift in Sources */,
+				77EE9D2CDCBB8C464C4A189DC248FBE6 /* AnimatedTextView.swift in Sources */,
+				29EE5DFEEC29160DC0405492746E8A4B /* UIViewExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A7E4D8D6E4288B93C67B3124DC48BF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AnimatedTextInput-AnimatedTextInput";
+			target = 8C2E09E036949D84633EB63D09D7250C /* AnimatedTextInput-AnimatedTextInput */;
+			targetProxy = 8652AACADFD9BE579A57C240B588A570 /* PBXContainerItemProxy */;
+		};
+		F14A4E5CB5599029144EF3A6ECFB8EDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnimatedTextInput;
+			target = 29D8DB41194AB47BA5E0F5FE96529B16 /* AnimatedTextInput */;
+			targetProxy = 771F4ABAD974A1D1EF7FE117B682EE9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09DBB253B0885677DB528964FECAF61F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AD26E7910F269CBB50041966DBE6029 /* Pods-NeedlemanWunsch.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NeedlemanWunsch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NeedlemanWunsch/Pods-NeedlemanWunsch.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NeedlemanWunsch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		52A66021A1E9DF38F6259F8F16A924C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCF5BFF9F87B3E0D654E24E9CE3AB385 /* Pods-NeedlemanWunsch.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NeedlemanWunsch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NeedlemanWunsch/Pods-NeedlemanWunsch.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NeedlemanWunsch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6F9224530522DD3C735EC96CF142642E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		774C98DAAB9DA11233550167B6861903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619DAC0550C5673B39595A192D994275 /* AnimatedTextInput.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AnimatedTextInput";
+				INFOPLIST_FILE = "Target Support Files/AnimatedTextInput/ResourceBundle-AnimatedTextInput-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = AnimatedTextInput;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		91D0C96ABFDD4150E41BC5F89524DA22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619DAC0550C5673B39595A192D994275 /* AnimatedTextInput.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AnimatedTextInput/AnimatedTextInput-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AnimatedTextInput/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AnimatedTextInput/AnimatedTextInput.modulemap";
+				PRODUCT_NAME = AnimatedTextInput;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A8DB5B22EE98C8BE20F6D121D2AD576F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619DAC0550C5673B39595A192D994275 /* AnimatedTextInput.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AnimatedTextInput";
+				INFOPLIST_FILE = "Target Support Files/AnimatedTextInput/ResourceBundle-AnimatedTextInput-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = AnimatedTextInput;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		B57951D085A1B98A97F8A1062A5E5C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F6834BF80C6EEE39181A062C9D64B9AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619DAC0550C5673B39595A192D994275 /* AnimatedTextInput.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AnimatedTextInput/AnimatedTextInput-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AnimatedTextInput/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AnimatedTextInput/AnimatedTextInput.modulemap";
+				PRODUCT_NAME = AnimatedTextInput;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57951D085A1B98A97F8A1062A5E5C5B /* Debug */,
+				6F9224530522DD3C735EC96CF142642E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6723FD1A2A748A0F35FC541F60968EAD /* Build configuration list for PBXNativeTarget "AnimatedTextInput" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6834BF80C6EEE39181A062C9D64B9AA /* Debug */,
+				91D0C96ABFDD4150E41BC5F89524DA22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		674235A09C70949E5AA4A9002F03DF88 /* Build configuration list for PBXNativeTarget "AnimatedTextInput-AnimatedTextInput" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				774C98DAAB9DA11233550167B6861903 /* Debug */,
+				A8DB5B22EE98C8BE20F6D121D2AD576F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DD49E139F2F08D5299BCB5A32BB5A14 /* Build configuration list for PBXNativeTarget "Pods-NeedlemanWunsch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A66021A1E9DF38F6259F8F16A924C4 /* Debug */,
+				09DBB253B0885677DB528964FECAF61F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

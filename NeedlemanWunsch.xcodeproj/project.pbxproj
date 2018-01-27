@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32737139A0F1358805656FFE /* Pods_NeedlemanWunsch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF05D03A8C52BA8CF8F52DDB /* Pods_NeedlemanWunsch.framework */; };
 		400976E91FED66560031E28F /* NeedlemanWunsch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400976E81FED66560031E28F /* NeedlemanWunsch.swift */; };
 		406FA82F1FEAA4B5001D572A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406FA82E1FEAA4B5001D572A /* AppDelegate.swift */; };
 		406FA8311FEAA4B5001D572A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406FA8301FEAA4B5001D572A /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		143979D63ACF871E3D52E779 /* Pods-NeedlemanWunsch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeedlemanWunsch.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeedlemanWunsch/Pods-NeedlemanWunsch.release.xcconfig"; sourceTree = "<group>"; };
 		400976E81FED66560031E28F /* NeedlemanWunsch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedlemanWunsch.swift; sourceTree = "<group>"; };
 		406FA82B1FEAA4B5001D572A /* NeedlemanWunsch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeedlemanWunsch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406FA82E1FEAA4B5001D572A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		406FA8501FEABA73001D572A /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
 		406FA8521FEABADC001D572A /* GridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCell.xib; sourceTree = "<group>"; };
 		408490F01FEE42D90007CF62 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		77F0667667C52DE2970CE921 /* Pods-NeedlemanWunsch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeedlemanWunsch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeedlemanWunsch/Pods-NeedlemanWunsch.debug.xcconfig"; sourceTree = "<group>"; };
+		AF05D03A8C52BA8CF8F52DDB /* Pods_NeedlemanWunsch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeedlemanWunsch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32737139A0F1358805656FFE /* Pods_NeedlemanWunsch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +71,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31C472B290197335CF72F8F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF05D03A8C52BA8CF8F52DDB /* Pods_NeedlemanWunsch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		406FA8221FEAA4B5001D572A = {
 			isa = PBXGroup;
 			children = (
 				406FA82D1FEAA4B5001D572A /* NeedlemanWunsch */,
 				406FA8421FEAA4B6001D572A /* NeedlemanWunschTests */,
 				406FA82C1FEAA4B5001D572A /* Products */,
+				CD8AAC972DD67D33C655976A /* Pods */,
+				31C472B290197335CF72F8F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +126,15 @@
 			path = NeedlemanWunschTests;
 			sourceTree = "<group>";
 		};
+		CD8AAC972DD67D33C655976A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77F0667667C52DE2970CE921 /* Pods-NeedlemanWunsch.debug.xcconfig */,
+				143979D63ACF871E3D52E779 /* Pods-NeedlemanWunsch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 406FA8481FEAA4B6001D572A /* Build configuration list for PBXNativeTarget "NeedlemanWunsch" */;
 			buildPhases = (
+				F1C377AF9DE24724C396B5ED /* [CP] Check Pods Manifest.lock */,
 				406FA8271FEAA4B5001D572A /* Sources */,
 				406FA8281FEAA4B5001D572A /* Frameworks */,
 				406FA8291FEAA4B5001D572A /* Resources */,
+				5929919AA1BD424D0348FF5B /* [CP] Embed Pods Frameworks */,
+				BB5DF31596644F782327247C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +236,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5929919AA1BD424D0348FF5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NeedlemanWunsch/Pods-NeedlemanWunsch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AnimatedTextInput/AnimatedTextInput.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnimatedTextInput.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeedlemanWunsch/Pods-NeedlemanWunsch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB5DF31596644F782327247C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeedlemanWunsch/Pods-NeedlemanWunsch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1C377AF9DE24724C396B5ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeedlemanWunsch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		406FA8271FEAA4B5001D572A /* Sources */ = {
@@ -371,6 +452,7 @@
 		};
 		406FA8491FEAA4B6001D572A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77F0667667C52DE2970CE921 /* Pods-NeedlemanWunsch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -387,6 +469,7 @@
 		};
 		406FA84A1FEAA4B6001D572A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 143979D63ACF871E3D52E779 /* Pods-NeedlemanWunsch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
